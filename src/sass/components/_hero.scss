@@ -1,0 +1,90 @@
+.hero {
+    width: 100%;
+    margin: 0 auto;
+    // height: 230px;
+    box-sizing: border-box;
+    // background: #2f303a;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.56),
+        rgba(0, 0, 0, 0.56)
+        ),
+        url("../images/bg_hero/mob_bg_hero-1x.jpg");
+    
+    @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.56),
+            rgba(0, 0, 0, 0.56)),
+            url("../images/bg_hero/mob_bg_hero-2x.jpg");
+            
+            }
+        @media screen and (min-width: 320px) {
+            min-width: 320px;
+        }
+    @media screen and (min-width: 768px) {
+            background-image: linear-gradient(
+                rgba(0, 0, 0, 0.56),
+                rgba(0, 0, 0, 0.56)),
+                url("../images/bg_hero/tablet_bg_hero-1x.jpg");
+                
+        @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+            background-image: linear-gradient(
+                rgba(0, 0, 0, 0.56),
+                rgba(0, 0, 0, 0.56)),
+                url("../images/bg_hero/tablet_bg_hero-2x.jpg");
+                }
+    }
+    @media screen and (min-width: 1024px) {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.56),
+            rgba(0, 0, 0, 0.56)),
+            url("../images/bg_hero/bg_hero-1x.jpg");
+        @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: linear-gradient(rgba(0, 0, 0, 0.56),
+                        rgba(0, 0, 0, 0.56)),
+                    url("../images/bg_hero/bg_hero-2x.jpg");
+        }
+    }
+    &__form {
+        width: 100%;
+        display: inline-block;
+        padding-top: 115px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+    &__form__input {
+        width: 100%;
+        position: relative;
+        background-color: transparent;
+        border: none;
+        border-bottom: 0.5px solid getColor('first-text-color');
+        font-weight: 400;
+        @include font(14px, 0.875, getColor('first-text-color'));
+        &:hover,
+        :focus,
+        :target {
+            border: none;
+            border-bottom: 0.5px solid getColor('first-text-color');
+        }
+        &::placeholder {
+            font-weight: 400;
+            @include font(14px, 0.875, getColor('first-text-color'));
+        }
+    }
+    &__form__btn {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        background-color: transparent;
+        border: none;
+        padding: 0;
+    }
+}

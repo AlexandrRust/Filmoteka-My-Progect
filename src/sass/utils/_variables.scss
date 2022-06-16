@@ -1,0 +1,25 @@
+$colors: (
+  'first-text-color': #ffffff,
+  "second-text-color": #000000,
+  "third-text-coloro": #545454,
+  "fourth-text-color": #8C8C8C,
+  "first-accent-color": #FF6B08,
+  "second-accent-color": #FF6B01,
+  "error-text-color": #FF001B,
+  "accent-icon-color": #ffffff,
+);
+
+@function getColor($key) {
+  @return map-get($colors, $key);
+}
+
+$accent-box-shadow-btn: 0px 4px 4px rgba(0, 0, 0, 0.15),
+  0px 4px 4px rgba(0, 0, 0, 0.15);
+
+$box-shadow-btn: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+$box-shadow-btn-filter: 0px 3px 1px rgba(0, 0, 0, 0.1),
+  0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+
+$transition-duration: 250ms;
+$timing-function: cubic-bezier(0.4, 0, 0.2, 1);
